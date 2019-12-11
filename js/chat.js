@@ -1,9 +1,7 @@
 'use strict'
 
-const nodeServer = false
-const serverUrl = nodeServer ? 'http://localhost:3003/chatHub' : 'https://localhost:5001/chatHub'
-
-var connection = new signalR.HubConnectionBuilder().withUrl(serverUrl).build()
+const serverUrl = 'http://localhost:3003/chatHub'
+const connection = new signalR.HubConnectionBuilder().withUrl(serverUrl).build()
 
 //Disable send button until connection is established
 document.getElementById('sendButton').disabled = true
